@@ -1,11 +1,8 @@
 # skills
 Sharing Claude skills with the community.
-
----
+--
 name: project-wiki
 version: 2.0
-description: "Automatically generate, maintain, de-duplicate, and health-check a compiled knowledge base (wiki) for Claude Projects. Use this skill whenever a project has source files that would benefit from a lightweight index layer, especially projects with 3+ source files, complex cross-references, or ongoing multi-session work. Trigger when the user mentions 'wiki', 'knowledge base', 'index files', 'project orientation', 'context management', 'health check', 'out of sync', or 'is the wiki current', or when a working session has modified source material. If a project has wiki files (_index.md, _concepts.md, etc.) present, always read them FIRST and run the session-start health check BEFORE touching raw source docs."
----
 
 # Project Wiki v2 · Self-Checking Knowledge Base for Claude Projects
 
