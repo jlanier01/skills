@@ -15,9 +15,9 @@ Also new:
 	•	Actionable output, including the consolidation steps to run when sync debt is detected.
 	•	--json output for piping the verdict into other automation.
 Installation
-The repo ships a packaged project-wiki.skill plus the raw files. Pick the path that matches where you run Claude.
-	1.	Upload the packaged skill. Install project-wiki.skill through the Skills interface in your Claude surface (see the Anthropic docs for the exact upload step on your plan). Custom skills are account-level, so once installed it applies to every project.
-	2.	Filesystem (Claude Code). Put these files in a folder named project-wiki/ where Claude Code discovers skills (cloning the repo as project-wiki does this). SKILL.md and both scripts load together.
+The skill is distributed as a single archive, 2.4 wiki.zip. Download and unzip it, then pick the path that matches where you run Claude. The archive contains SKILL.md, the two scripts, and the packaged project-wiki.skill.
+	1.	Upload the packaged skill. Install project-wiki.skill (inside the unzipped archive) through the Skills interface in your Claude surface (see the Anthropic docs for the exact upload step on your plan). Custom skills are account-level, so once installed it applies to every project.
+	2.	Filesystem (Claude Code). Put the unzipped SKILL.md and both scripts in a folder named project-wiki/ where Claude Code discovers skills. They load together.
 	3.	Single project, no skill. If you only want it in one project, add SKILL.md and the two scripts to that project’s knowledge directly.
 This is an update to an existing skill, not a new one. The name and directory are unchanged, so installing over a prior version replaces it in place rather than creating a parallel entry.
 How it works
