@@ -11,7 +11,7 @@ Without a compiled index, a fresh conversation starts cold. Claude either re-rea
 Project Wiki moves the integrity check to read time. Instead of “remember to review the wiki,” the wiki reports its own health the instant a session begins. A healthy project produces almost no output. A drifting one says exactly what is off and how to fix it.
 
 What is new in 2.4
-The headline change makes the skill safe to distribute. Invariant reconciliation (the part that verifies a count in the wiki still matches its source of truth) used to be hardcoded into the audit script, which meant the script carried the original author’s private filenames and structure. In 2.4 those specs are declarative: each invariant declares its own source, sheet, column, and match pattern as data inside the project’s state file. The shipped script holds zero project-specific detail and works for any project unchanged.
+The shipped script holds zero project-specific detail and works for any project unchanged.
 
 Also new:
 	•	CSV and TSV reconciliation with no extra dependency (spreadsheet sources still use openpyxl when present).
@@ -24,7 +24,9 @@ Also new:
 Installation
 The skill is distributed as a single archive, 2.4 wiki.zip. Download and unzip it, then pick the path that matches where you run Claude. The archive contains SKILL.md, the two scripts, and the packaged project-wiki.skill.
 	1.	Upload the packaged skill. Install project-wiki.skill (inside the unzipped archive) through the Skills interface in your Claude surface (see the Anthropic docs for the exact upload step on your plan). Custom skills are account-level, so once installed it applies to every project.
+	
 	2.	Filesystem (Claude Code). Put the unzipped SKILL.md and both scripts in a folder named project-wiki/ where Claude Code discovers skills. They load together.
+	
 	3.	Single project, no skill. If you only want it in one project, add SKILL.md and the two scripts to that project’s knowledge directly.
 This is an update to an existing skill, not a new one. The name and directory are unchanged, so installing over a prior version replaces it in place rather than creating a parallel entry.
 
