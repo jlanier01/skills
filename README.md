@@ -2,6 +2,7 @@ Project Wiki
 A self-checking knowledge base for Claude Projects. Version 2.4.
 
 Project Wiki is a Claude Skill that builds and maintains a lightweight, compiled index over the files in a Claude Project. It keeps a consistent mental model across separate conversations, cuts token waste by reading small orientation files before pulling heavy source, and reports its own health at the start of every session so the index never silently drifts out of sync.
+
 It is designed around one hard constraint: project files are read-only. The only way to change one is to delete it and re-upload by hand, and a re-upload does not always re-index immediately. So every wiki update has a real manual cost, and the entire design minimizes how often, and how many, files must be swapped.
 
 Why this exists
@@ -26,6 +27,7 @@ The skill is distributed as a single archive, 2.4 wiki.zip. Download and unzip i
 	2.	Filesystem (Claude Code). Put the unzipped SKILL.md and both scripts in a folder named project-wiki/ where Claude Code discovers skills. They load together.
 	3.	Single project, no skill. If you only want it in one project, add SKILL.md and the two scripts to that project’s knowledge directly.
 This is an update to an existing skill, not a new one. The name and directory are unchanged, so installing over a prior version replaces it in place rather than creating a parallel entry.
+
 How it works
 
 Wiki layout
